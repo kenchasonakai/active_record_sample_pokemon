@@ -13,7 +13,7 @@ end
 
 class Pokemon < ActiveRecord::Base
   has_many :user_pokemons
-  belongs_to :user, through: :user_pokemons
+  has_one :user, through: :user_pokemons
   has_many :pokemon_types
   has_many :types, through: :pokemon_types
 end
